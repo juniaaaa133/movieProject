@@ -1,9 +1,9 @@
 import React from 'react'
+import Text from './Text'
 
 const About = () => {
-  return (
-    <div>About</div>
-  )
+  return <Text text={'About'} />
+
 }
 
 export default About

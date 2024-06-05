@@ -1,10 +1,8 @@
 import React from 'react'
+import Text from './Text'
 
 const Home = () => {
-    console.log('hey')
-  return (
-    <div>Home</div>
-  )
+  return <Text text={'Home'} />
 }
 
 export default Home

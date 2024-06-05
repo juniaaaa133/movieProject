@@ -13,8 +13,8 @@
 }
 
 :root {
-  --main: #FEB941;
-  --sec: #6DC5D1;
+  --main: #e5f105;
+  --sec: #fffeeb;
 }
 
 .skeleton {
@@ -22,6 +22,15 @@
   animation-duration: 2 s;
   animation-iteration-count: infinite;
   
+}
+a {
+  color : #373737;
+}
+a:hover {
+  color : #454545;
+}
+a.active {
+  color :#ffe414
 }
 @keyframes skeleton {
   0% {
@@ -61,7 +70,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #cecece;
+  background-color: #f4fff8;
   /* width: 100vw; */
   /* position: fixed !important; */
   /* overflow-y: scroll !important; */
@@ -88,11 +97,40 @@ body {
 .title2 {
   font-size: 24px;
 }
-
+.trans {
+  transition: all;
+  transition-duration: .4s;
+}
+.grided {
+  display: grid;
+  grid-template-columns: 320px 320px;
+  width: 800px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
 @media (max-width:480px) {
   .title {
     font-size: 26px;
     text-align: center;
   }
   
+}
+@media (max-width: 990px) {
+  .grided {
+    grid-template-columns:250px 250px ;
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .grided {
+    grid-template-columns:100%;
+    width: 320px;
+  }
+}
+@media (max-width: 480px) {
+  .grided {
+    grid-template-columns:100%;
+    width: 80%;
+  }
 }
