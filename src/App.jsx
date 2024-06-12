@@ -1,14 +1,12 @@
-import {  RouterProvider, createBrowserRouter } from "react-router-dom";
-import Main from "./routes/layout/Main";
-import { ProductDetail,Home,About,Products } from './routes/page';
-import { loader as productLoader } from "./components/Products";
-import { loader as productDetailLoader } from "./components/ProductDetail";
-import { loader as userLoader } from "./components/Users";
-import { loader as userDetailLoader } from "./components/UserDetail";
-import Users from "./components/Users";
-import UserDetail from "./components/UserDetail";
-import Error from "./components/Error";
-
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import Main from './routes/layout/Main'
+import { Home ,Detail, Upcoming, Popular, SearchPage} from './routes/page';
+import { loader as homeLoader} from "./pages/home/Home"
+import {loader as detailLoader} from "./pages/Detail/Detail"
+import {loader as upcomingLoader} from './pages/upcoming/Upcoming'
+import {loader as popularLoader} from './pages/popular/Popular'
+import {loader as searchLoader} from './pages/searchPage/SearchPage'
+import Error from "./pages/error/Error";
 
 function App() {
 
@@ -16,36 +14,33 @@ const router = createBrowserRouter([
         {
             path : "/",
             element :<Main />,
-            errorElement : <Error/>,
+            errorElement : <Error />,
             children : [
                 {
                     index : true,
-                    element : <Home />
+                    element : <Home />,
+                    loader : homeLoader
                 },
                 {
-                    path : '/about',
-                    element : <About />
+                    path : '/upcomings',
+                    element : <Upcoming />,
+                    loader : upcomingLoader,
                 },
                 {
-                    path : '/products',
-                    element : <Products />,
-                    loader : productLoader
+                    path : '/populars',
+                    element : <Popular />,
+                    loader : popularLoader
                 },
                 {
-                    path : "/products/:id",
-                    element : <ProductDetail />,
-                    loader : productDetailLoader
+                    path : '/movies/:id',
+                    element : <Detail />,
+                    loader : detailLoader
                 },
                 {
-                    path : '/users',
-                    element : <Users />,
-                    loader : userLoader
+                    path : '/movies/search-movies/:query',
+                    element : <SearchPage />,
+                    loader : searchLoader
                 },
-                {
-                    path : "/users/:id",
-                    element : <UserDetail />,
-                    loader : userDetailLoader
-                }
             ]
         }
     ])

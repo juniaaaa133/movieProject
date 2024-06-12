@@ -7,9 +7,9 @@ export default {
     screens: {
       'sm': '480px',
       // => @media (min-width: 640px) { ... }
-
       'md': '768px',
-      // => @media (min-width: 768px) { ... }
+      'lg': '990px',
+      'xl': '1024px',
 
     },
     extend: {},

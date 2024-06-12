@@ -1,0 +1,7 @@
+.nv {
+    border-bottom-color:  #FFD13C;
+    width: fit-content;
+}
+.nv.active {
+    border-bottom-width: 1.8px;
+}

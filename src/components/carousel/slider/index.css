@@ -1,0 +1,9 @@
+.hero-layout {  
+       background-image : linear-gradient(to right, #000000f0,#000000c0 ,#03030300)
+}
+
+@media (max-width: 490px) {
+    .hero-layout {  
+       background-image : linear-gradient(to top, #000000e2,#000000b3 ,#03030300)
+}
+}

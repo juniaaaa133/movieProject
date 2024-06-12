@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 /* poppins-latin-400-normal */
 @font-face {
@@ -13,7 +11,7 @@
 }
 
 :root {
-  --main: #e5f105;
+  --main: #e7f208;
   --sec: #fffeeb;
 }
 
