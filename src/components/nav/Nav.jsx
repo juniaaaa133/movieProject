@@ -38,7 +38,7 @@ window.addEventListener('scroll',() =>
     <div className={`z-[6] top-0  items-center w-[100%] h-[56px] flex justify-between px-[20px] md:px-[40px] ${isScrolled ? 'fixed bg-org' :'absolute bg-tran'}`}>
       <div className="flex items-center gap-[10px]">
       <RxHamburgerMenu onClick={()=>setIsOpenedMenu(true)} className='lg:hidden block p-[10px] mini-trans rounded-full bcu active:bg-[#424242] bg-inherit text-[40px] fontcl'/>
-        <NavLink to='/' className='logo-f fontcl2 text-[25px] '>URMV</NavLink>
+        <NavLink to='/' className='logo-f fontcl2 text-[25px] '>Mabel</NavLink>
       </div>
 <div className="flex items-center gap-[80px]">
 <div className="lg:flex hidden items-center gap-[20px]">
@@ -64,7 +64,7 @@ window.addEventListener('scroll',() =>
     <div className={`bg-org z-[7] flex flex-col fixed top-0 p-[20px] w-[200px] h-[100vh] mega-trans ${isOpenedMenu ? 'left-0' : 'left-[-210px]'}`}>
     <div className="flex mb-[50px] items-center gap-[10px]">
       <RxCross1 onClick={()=>setIsOpenedMenu(false)} className='lg:hidden block p-[10px] mini-trans rounded-full bcu active:bg-[#424242] bg-inherit text-[40px] fontcl'/>
-        <NavLink to='/' className='logo-f fontcl2 text-[25px] '>URMV</NavLink>
+        <NavLink to='/' className='logo-f fontcl2 text-[25px] '>Mabel</NavLink>
       </div>
       <div className="flex flex-col gap-[16px]">      
       <NavLink to='/' className='nv trans fontclH logo-f text-[15px] pb-[2px] '>Home</NavLink>
